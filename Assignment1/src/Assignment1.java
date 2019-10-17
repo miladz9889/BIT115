@@ -10,38 +10,38 @@ public class Assignment1 {
 		System.out.println(
 				"=============================================================================================================================");
 
+		//Ask for name and validate that user inputs a string and nothing else. Then store user input into variable name.
+		
 		System.out.println("Please enter your name: ");
 
-		while (userInput.hasNextInt()) {
+		while (userInput.hasNextInt() || userInput.hasNextDouble()) {
 			System.out.println("ERROR: You aren't a robot. Use the name your parents gave you using only letters :)");
 			userInput.nextLine();
 		}
 
 		String name = userInput.nextLine();
 
-		/*
-		 * double height = 0; boolean isDouble; do {System.out.println("Hello, " + name
-		 * + "." + " Please enter the height of a right triangle"); if
-		 * (userInput.hasNextDouble()) { height = userInput.nextDouble(); isDouble =
-		 * true; } else { System.out.println("That is not a valid number!"); isDouble =
-		 * false; userInput.next(); } }while (!(isDouble)); height =
-		 * userInput.nextDouble();
-		 */
-
+		//Print out name and then ask for user to input a height. Validate that the user inputs a int/double and that the number is between 0 and 1000
+		
 		System.out.println("Hello, " + name + "." + " Please enter the height of a right triangle");
 
-		while (!userInput.hasNextDouble()) {
+		double triangleHeight = 0.0;
+
+		while (triangleHeight <= 0 || triangleHeight > 1000 || !userInput.hasNextDouble()) {
 			System.out.println("ERROR: Please enter a valid number that is between 0 and 1000");
 			userInput.nextLine();
-
-		}
-
-		Double triangleHeight = userInput.nextDouble();
+		
+		
+		} 
+		
+		triangleHeight += userInput.nextDouble();
+		
 
 		System.out.println("Now enter the base of the same right triangle: ");
 		while (!userInput.hasNextDouble()) {
 			System.out.println("ERROR: Please enter a number!");
 			userInput.nextLine();
+			System.exit(1);
 		}
 
 		double base = 0;
