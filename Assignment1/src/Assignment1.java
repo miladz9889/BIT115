@@ -23,18 +23,34 @@ public class Assignment1 {
 
 		//Print out name and then ask for user to input a height. Validate that the user inputs a int/double and that the number is between 0 and 1000
 		
+		
+		
+		
 		System.out.println("Hello, " + name + "." + " Please enter the height of a right triangle");
 
+		boolean test = false; 
 		double triangleHeight = 0.0;
 
-		while (triangleHeight <= 0 || triangleHeight > 1000 || !userInput.hasNextDouble()) {
+		while (triangleHeight <= 0 || triangleHeight > 1000 || test == false );
+		{if(userInput.hasNextDouble())
+			{triangleHeight = userInput.nextDouble();
+		test = true;
+		} else if (!userInput.hasNextDouble()) {
+			System.out.println("You need to enter a number!");
+			userInput.next();
+		}
+		}
+		
+		
+		
+		
+		
+		
+		/*while (triangleHeight <= 0 || triangleHeight > 1000 || !userInput.hasNextDouble()) {
 			System.out.println("ERROR: Please enter a valid number that is between 0 and 1000");
 			userInput.nextLine();
+		} */
 		
-		
-		} 
-		
-		triangleHeight += userInput.nextDouble();
 		
 
 		System.out.println("Now enter the base of the same right triangle: ");
@@ -85,5 +101,6 @@ public class Assignment1 {
 
 		System.out.println(
 				"=============================================================================================================================");
-	}
+	
+}
 }
