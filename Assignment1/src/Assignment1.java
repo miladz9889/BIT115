@@ -31,13 +31,12 @@ public class Assignment1 {
 		Double triangleHeight = 0.0;
 
 		while (triangleHeight < 1 || triangleHeight > 1000) {
-			System.out.println("Please enter a number between 0 and 1000");
+			System.out.println("Please enter a number between 1 and 1000");
 			while (!userInput.hasNextDouble()) {
 				System.out.println("Needs to be a number!");
 				userInput.next();
 
 			}
-			;
 
 			triangleHeight = userInput.nextDouble();
 		}
@@ -47,7 +46,7 @@ public class Assignment1 {
 		Double triangleBase = 0.0;
 
 		while (triangleBase < 1 || triangleBase > 1000) {
-			System.out.println("Please enter a number between 0 and 1000");
+			System.out.println("Please enter a number between 1 and 1000");
 			while (!userInput.hasNextDouble()) {
 				System.out.println("Needs to be a number!");
 				userInput.next();
@@ -67,18 +66,15 @@ public class Assignment1 {
 		Double circleRadius = 0.0;
 
 		while (circleRadius < 1 || circleRadius > 1000) {
-			System.out.println("Please enter a number between 0 and 1000");
+			System.out.println("Please enter a number between 1 and 1000");
 			while (!userInput.hasNextDouble()) {
 				System.out.println("Needs to be a number!");
 				userInput.next();
 
 			}
-			
 
 			circleRadius = userInput.nextDouble();
 		}
-
-		
 
 		double circleArea = Math.PI * circleRadius * circleRadius;
 		double circleParimeter = 2 * Math.PI * circleRadius;
@@ -93,10 +89,11 @@ public class Assignment1 {
 			System.out.println("That is correct!");
 		} else {
 			System.out.println("That is not correct!");
-			
+
 		}
 
-		System.out.println("=============================================================================================================================");
+		System.out.println(
+				"=============================================================================================================================");
 	}
 
 }
